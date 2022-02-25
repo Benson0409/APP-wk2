@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
+import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import albumData from "../json/albums";
 
 const Albumlist = () => {
@@ -123,23 +124,27 @@ const Albumlist = () => {
 const styles = StyleSheet.create({
   thumbnailContainerStyle: {
     flexDirection: "row",
-    justifyContent: "flex-start"
+    justifyContent: "space-around",
+    
   },
   thumbnailStyle: {
     height: 50,
     width: 50,
-    margin: 5
+    margin: 5,
+    
   },
   headerContentStyle: {
     flexDirection: "column",
     justifyContent: "space-around",
-    paddingLeft: 10
+    paddingLeft: 10,
+    
   },
   cardContainerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
+    borderWidth: 2,
+    borderRadius: 5,
+    borderColor: "black",
     shadowColor: "#000",
+    
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
@@ -150,13 +155,16 @@ const styles = StyleSheet.create({
   },
   cardSectionStyle: {
     padding: 5,
-    backgroundColor: "#fff",
-    borderColor: "#ddd",
+    backgroundColor: "#c9c9c9",
+    borderColor: "black",
+    borderWidth: 5,
     borderBottomWidth: 1
   },
   imageStyle: {
     height: 300,
-    width: null
+    width: null,
+    
+
   }
 });
 
