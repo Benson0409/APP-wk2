@@ -7,18 +7,7 @@ const Albumlist = () => {
   return (
     <ScrollView>
       <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: albumData[0].thumbnail_image
-            }}
-          />
-          <View style={styles.headerContentStyle}>
-            <Text>{albumData[0].title}</Text>
-            <Text>{albumData[0].artist}</Text>
-          </View>
-        </View>
+        
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -27,20 +16,27 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
+          {/* <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: albumData[1].thumbnail_image
+              uri: albumData[0].thumbnail_image
             }}
-          />
+          /> */}
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[1].title}</Text>
-            <Text>{albumData[1].artist}</Text>
+           
+              <Text style={{fontWeight:"bold",fontSize:18,align:"center"}}>{albumData[0].title}</Text>
+            
+            {/* <View>
+              <Text style={{align:"center",}}>{albumData[0].artist}</Text>
+            </View> */}
+            
           </View>
+        
         </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -49,20 +45,21 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
+          {/* <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: albumData[2].thumbnail_image
+              uri: albumData[1].thumbnail_image
             }}
-          />
+          /> */}
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[2].title}</Text>
-            <Text>{albumData[2].artist}</Text>
+            <Text style={{fontWeight:"bold",fontSize:18,align:"center"}}>{albumData[1].title}</Text>
+            {/* <Text>{albumData[1].artist}</Text> */}
           </View>
         </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -71,20 +68,21 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
+          {/* <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: albumData[3].thumbnail_image
+              uri: albumData[2].thumbnail_image
             }}
-          />
+          /> */}
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[3].title}</Text>
-            <Text>{albumData[3].artist}</Text>
+            <Text style={{fontWeight:"bold",fontSize:18,align:"center"}}>{albumData[2].title}</Text>
+            {/* <Text>{albumData[2].artist}</Text> */}
           </View>
         </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -93,20 +91,21 @@ const Albumlist = () => {
             }}
           />
         </View>
-      </View>
-      <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-          <Image
+          {/* <Image
             style={styles.thumbnailStyle}
             source={{
-              uri: albumData[4].thumbnail_image
+              uri: albumData[3].thumbnail_image
             }}
-          />
+          /> */}
           <View style={styles.headerContentStyle}>
-            <Text>{albumData[4].title}</Text>
-            <Text>{albumData[4].artist}</Text>
+            <Text style={{fontWeight:"bold",fontSize:18,align:"center"}}>{albumData[3].title}</Text>
+            {/* <Text>{albumData[3].artist}</Text> */}
           </View>
         </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        
         <View style={styles.cardSectionStyle}>
           <Image
             style={styles.imageStyle}
@@ -114,6 +113,18 @@ const Albumlist = () => {
               uri: albumData[4].image
             }}
           />
+        </View>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          {/* <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: albumData[4].thumbnail_image
+            }}
+          /> */}
+          <View style={styles.headerContentStyle}>
+            <Text style={{fontWeight:"bold",fontSize:24,align:"center"}}>{albumData[4].title}</Text>
+            {/* <Text>{albumData[4].artist}</Text> */}
+          </View>
         </View>
       </View>
       
@@ -124,7 +135,7 @@ const Albumlist = () => {
 const styles = StyleSheet.create({
   thumbnailContainerStyle: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "center",
     
   },
   thumbnailStyle: {
@@ -135,15 +146,16 @@ const styles = StyleSheet.create({
   },
   headerContentStyle: {
     flexDirection: "column",
-    justifyContent: "space-around",
+    justifyContent: "center",
     paddingLeft: 10,
+    textAlign:"center",
     
   },
   cardContainerStyle: {
-    borderWidth: 2,
-    borderRadius: 5,
-    borderColor: "black",
-    shadowColor: "#000",
+    // borderWidth: 2,
+    // borderRadius: 5,
+    // borderColor: "black",
+    // shadowColor: "#000",
     
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -155,15 +167,15 @@ const styles = StyleSheet.create({
   },
   cardSectionStyle: {
     padding: 5,
-    backgroundColor: "#c9c9c9",
-    borderColor: "black",
-    borderWidth: 5,
-    borderBottomWidth: 1
+    backgroundColor: "#f0d4ad",
+    borderColor: "white",
+    // borderWidth: 5,
+    // borderBottomWidth: 1
   },
   imageStyle: {
     height: 300,
-    width: null,
-    
+    width: 300,
+    marginLeft:"15%",
 
   }
 });
